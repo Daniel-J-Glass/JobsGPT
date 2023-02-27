@@ -456,7 +456,8 @@ class EasyApplyBot:
             options (dict): A dictionary containing the text of the options as keys and the corresponding WebElement as values.
         """
         prompt = f"Extra details: {self.details}\n\
-        Q: {question}\nOptions: {options.keys()}\nThe following is only the correct option based on the prior details. No other outputs.:"
+        Q: {question}\nOptions: {options.keys()}\nThe following is only the correct option based on the prior details. \n\
+        A:"
         
         answer = self.Resume.ask(prompt)
         print("Answer:"+answer)
@@ -493,7 +494,9 @@ class EasyApplyBot:
         prompt = f"Extra Details: {self.details}\n\
         The following is the answer to the prompt for answering professional details according to \"extra details\" and \"resume details\".\
         Is the skill listed? If not, answer 0 years of experience if it is not in the prior details. Makes very conservative estimates of related skills.\
-        If the prompt asks for a number, only outputs a number. Answers accurately about personal details like location and relevant websites.{label}:"
+        If the prompt asks for a number, only outputs a number. Answers accurately about personal details like location and relevant websites.\n\
+        Q:{label}\n\
+        A:"
         answer = self.Resume.ask(prompt)
 
         if re.search(r'\d', answer):
@@ -517,7 +520,7 @@ class EasyApplyBot:
         prompt = f"Extra details: {self.details}\n\
             Based on these details, the following is the best option for the question.\n\
             Q: {label} Options: {option_texts}\n\
-            The correct option is (no extra words):"
+            A:"
         
         for _ in range(2):
             answer = self.Resume.ask(prompt)
