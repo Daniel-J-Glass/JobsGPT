@@ -1,4 +1,4 @@
-### JobsGPT
+# JobsGPT
 
 ## What is it?
 
