@@ -1,0 +1,9 @@
+{
+    "openai_api_key": "your key here",
+    "temperature": 0.5,
+    "max_tokens": 4096,
+    "n": 2,
+    "model": "text-davinci-003",
+    "presence_penalty": 0.8,
+    "stop_sequence": "###"
+}
