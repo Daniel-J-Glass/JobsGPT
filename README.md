@@ -1,4 +1,5 @@
-IntelligentAutoApply
+### JobsGPT
+
 ## What is it?
 
 This is a python script that will automatically apply to job postings.
