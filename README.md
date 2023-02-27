@@ -26,6 +26,8 @@ The script will scrape the job posting website for the job posting URL, and then
 
 - [ ] Code refactoring and cleanup, this was just to get it working without rewriting the auto-apply script
 - [ ] Centralize config files
+- [ ] Workday application functionality
+- [ ] Improved flexibility using GPT3 A* search
 - [ ] GUI maybe???
 
 ## How can I contribute?
