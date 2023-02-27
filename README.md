@@ -10,7 +10,7 @@ This is a python script that will automatically apply to job postings.
 3. Set up the resume
 4. Set up the job postings you want to apply to
 5. Fill in config.json and summarizer_config.json
-6. Run the script (You need to click submit)
+6. Navigate to the LinkedIn-Easy-Apply-Bot directory and run the script (You need to click submit on each job application by default)
 7. Fill in the <user>-Details.txt as questions come up that the bot doesn't know
 8. Once the bot is accurate enough, you can disable the "test" variable in easyapplybot.py.
 
