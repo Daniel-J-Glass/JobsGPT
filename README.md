@@ -26,6 +26,7 @@ The script will scrape the job posting website for the job posting URL, and then
 ## TODO
 
 - [ ] Improve honesty through better prompting
+- [ ] Skip job if job description isn't relevant
 - [ ] Code refactoring and cleanup, this was just to get it working without rewriting the auto-apply script
 - [ ] Centralize config files
 - [ ] Workday application functionality
