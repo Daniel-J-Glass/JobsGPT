@@ -1,21 +1,35 @@
-# C:\Users\drago\Documents\Programming\DOWORK\AutoApply
+# JobsGPT
+
 ## What is it?
 
-This is a simple python script that will automatically apply to job postings.
+This is a python script that will automatically apply to job postings.
 
 ## How do I use it?
 
-1. Set up the job posting URL and the location
+1. Fill in the config.yaml
 2. Set up the cover letter
 3. Set up the resume
-4. Set up the job posting website
-5. Set up the job postings you want to apply to
-6. Set up the email address you want to send the cover letter to
-7. Run the script
+4. Set up the job postings you want to apply to
+5. Fill in config.json and summarizer_config.json
+6. Navigate to the LinkedIn-Easy-Apply-Bot directory and run the script (You need to click submit on each job application by default)
+7. Fill in the <user>-Details.txt as questions come up that the bot doesn't know
+8. Once the bot is accurate enough, you can disable the "test" variable in easyapplybot.py.
+
+## WARNING
+
+Please make sure your bot is accurate before applying to jobs. I've included my details file to show just how much it needs to not lie!!!
 
 ## How does it work?
 
-The script will scrape the job posting website for the job posting URL, and then it will use the information from the job posting to automatically fill in the fields in the cover letter. The script will then email the cover letter to the specified email address.
+The script will scrape the job posting website for the job posting URL, and then it will use the information from the job posting to automatically generate a cover letter with OpenAI api, then will go through the job listing and answer the job questions based on resume and custom details using OpenAI api as well.
+
+## TODO
+
+- [ ] Code refactoring and cleanup, this was just to get it working without rewriting the auto-apply script
+- [ ] Centralize config files
+- [ ] Workday application functionality
+- [ ] Improved flexibility using GPT3 A* search
+- [ ] GUI maybe???
 
 ## How can I contribute?
 
