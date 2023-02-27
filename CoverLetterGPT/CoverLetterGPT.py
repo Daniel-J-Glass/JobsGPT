@@ -22,26 +22,16 @@ class CoverLetterGPT:
     gpt = ChatGPT.ChatGPT("config.json")
     summarizer = ChatGPT.ChatGPT("summarizer_config.json")
 
-    preprompt = "The following is the best possible cover letter given the following resume details and job description. \
-    It is tailored to the job role and description.\
-    It is very personable, accurate, and impressive. It is guaranteed to get me the job, so long as I'm qualified.\
-    It includes the most impressive details from the resume. It has sentence length variety, and a natural cadence. It looks like it's written by a good writer.\
-    It uses a good amount of compound sentences. \
-    It is formatted and spaced for readability and is as concise as possible (3 paragraphs), without missing impressive details.\
-    It does not include years of experience not represented on the resume. It does not include skills that are not on the resume.\
-    It does not simply list skills, but includes them coherently in accordance with the job description.\
-    High perplexity and burstiness.\
-    It is perfectly accurate to the resume. The following is a cover letter that meets these criterias and begins with \"Dear Hiring Manager\":"
+    preprompt = "The following cover letter has been tailored specifically for the job role and description, using the most impressive details from your resume. It is a highly engaging, accurately written, and impressive cover letter that has been designed to showcase your unique strengths and qualifications, and to make you stand out as a top candidate. The letter incorporates a mix of sentence lengths, a natural rhythm, and a good amount of compound sentences to create a smooth and professional tone. The format and spacing have been optimized for readability, with concise and compelling content that emphasizes your skills and qualifications in accordance with the job description. The cover letter does not include years of experience or skills that are not represented on the resume, but rather focuses on the key strengths that make you the ideal candidate for the job. It is guaranteed to meet your expectations and create an outstanding first impression with the hiring manager. The following is a cover letter that meets these criteria and begins with \"Dear Hiring Manager\":"
     prompt_layout = "Resume Details: {resume}\n\nJob Summary: {job_summary}\n\n{preprompt}"
     chat_layout = "I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer.\n\
         Resume Details: {resume}\n\n{preprompt}"
 
 
-    resume_summ_prompt = "Resume: {resume}\n\nHere are the full notes for the resume, the individual's job experience including job details and dates, the individual's company impacts, the individual's technical experience and skills, no details lost. The individual's personal details are included. The individual's first and last name are included. Organized by employment dates. Using bullet points.:"
+    resume_summ_prompt = "Resume: {resume}\n\nHere is a complete breakdown of the individual's job experience, including job details and dates, as well as the impacts they've had on their respective companies. Their technical experience and skills are also included, with no details left out. Personal details, such as their first and last name, are also provided. The information is organized by employment dates and presented in an easy-to-read bullet point format."
     job_summ_prompt = "Job Description: {document}\n\nHere are full notes of the job description; position name, job role, the company, a comprehensive list of technical skills and experience are included. Using bullet points:"
 
-    cover_letter_check = "This is an evaluation of a cover letter given the following criteria: Is this a good cover letter to send to a hiring manager? Does it look automatically generated? No filler values allowed like \"Company ABC\". \nIf it doesn't comply, it gives the reason. Respond only with \"YES\" or the reason for failure:"
-
+    cover_letter_check = "Evaluate the following cover letter to determine if it is suitable to send to a hiring manager. Responses should be 'YES' if the cover letter meets the criteria and 'NO' followed by the reason if it does not. The cover letter must be natural-sounding and avoid generic language or filler values like 'Company ABC'.\n\n{cover_letter}"
     def __init__(self,job_description, resume_path, extra_details = None, gpt=gpt, preprompt = preprompt, prompt_layout = prompt_layout, cover_letter_check = cover_letter_check, checker_retries = 2):
         self.job_description = job_description
         self.resume = self._docx_to_summary(resume_path) # TODO: Parse resume into plain text
@@ -144,7 +134,7 @@ class CoverLetterGPT:
         doc.save(docx_file_path)
 
     def _cover_letter_is_valid(self, cover_letter):
-        prompt = self.cover_letter_check + cover_letter
+        prompt = self.cover_letter_check.format(cover_letter=cover_letter)
 
         # Recieve quality check
         response = self.gpt.chat(prompt)
