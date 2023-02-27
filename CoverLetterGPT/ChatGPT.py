@@ -12,7 +12,7 @@ class ChatGPT:
         openai.api_key = config["openai_api_key"]
         self.temperature = config["temperature"]
         self.max_tokens = config["max_tokens"]
-        self.n = config["n"]
+        self.best_of = config["best_of"]
         self.model = config["model"]
         self.presence_penalty = config["presence_penalty"]
         # self.preprompt = config["preprompt"]
@@ -28,7 +28,7 @@ class ChatGPT:
             temperature=self.temperature,
             max_tokens=self.max_tokens-token_count,
             presence_penalty=self.presence_penalty,
-            n=self.n,
+            best_of=self.best_of,
             stop = self.stop
         )
         generation = response.choices[0].text.strip()
