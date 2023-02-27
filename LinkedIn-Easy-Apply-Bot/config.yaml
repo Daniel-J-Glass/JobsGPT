@@ -1,0 +1,29 @@
+username: username
+password: password
+phone_number: phone number
+
+positions:
+- Data Science
+- Data Analyst
+- Machine Learning Engineer
+- Data Engineer
+- Devops Engineer
+- Automation Engineer
+
+locations:
+- Remote
+
+# --------- Optional Parameters -------
+uploads:
+ Resume: ..\Daniel Glass Resume - Data Science.docx # PATH TO Resume 
+ Cover Letter: ..\Daniel Glass - CoverLetter.docx # PATH TO cover letter
+ Employment Details: ..\Daniel Glass - Details.txt
+
+# output_filename:
+# - # PATH TO OUTPUT FILE (default output.csv)
+
+# blacklist:
+# - # Company names you want to ignore
+
+#blackListTitles:
+#- # Add job titles you want to ignore

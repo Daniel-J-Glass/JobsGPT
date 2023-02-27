@@ -1,0 +1,73 @@
+Years of Experience:
+    Python:4
+    R:0
+    C#:1
+    Java:1
+    Javascript:0
+    Linux:3
+    Development:3
+    Kubernetes:0
+    Terraform:0
+    Docker:2
+    Analytics:2
+    Data Engineering:2
+    Electrical Engineering:0
+    Datawarehouse:1
+    Devops:2
+    Databases:2
+    Data Quality:3
+    ETL Testing:2
+    Project management:1
+    Project Finance:0
+    Smartsheet:1
+    Machine learning:2
+    MySQL:2
+    SQL:2
+    Kafka:0
+    Server Hardware:0
+    Microsft Excel:2
+    Microsoft Office:4
+    Microsoft Azure:0
+    Bash:2
+    ServiceNow:1
+    Wordpress Development:0
+    Technical Support:3
+    Quickbooks:0
+    Supporting internal,external customers:3
+    Amazon Web Services(AWS):2
+    IBM SPSS:0
+    Salesforce:0
+    HR systems:0
+    Workday:0
+    Tableau:0
+    Hadoop:0
+    Business Project Management:1
+    Dashboard:0
+    Pharmaceuticals:0
+    Spring Framework:0
+    Building machine learning models end to end:1
+    Generative AI research:1
+    Classification AI research:1
+    Research and development:3
+
+
+Education:
+    Have PhD:No
+    Have Master's Degree:No
+    Have Bachelor's Degree:Yes
+    Have Associate's Degree:Yes
+    Highschool diploma:Yes
+
+Misc:
+    Fluent in English
+    Vaccinated
+    Will not need immigration sponsorship
+    Is a US citizen
+    Is legally authorized to work in the US
+    Can begin work immediately
+    Is Comfortable Commuting
+    Is Comfortable working onsite
+    Does have a valid drivers liscence
+
+URLs:
+    Gitub URL: https://github.com/Daniel-J-Glass
